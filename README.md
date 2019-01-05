@@ -96,7 +96,7 @@ y=b+wx+noise
 # generate data
 
 np.random.seed(123)
-x_train=np.arrange(0,10,0.25)
+x_train=np.arange(0,10,0.25)
 y_train=5*x_train+1+np.random.normal(0,1,size=x_train.shape)
 plt.scatter(x_train,y_train)
 
@@ -133,5 +133,5 @@ sess.run(init) # after this step the variables in the session have been initiali
 
 for i in range(20):
   sess.run(training_op,feed_dict={x:x_train,y:y_train})
-  print("Iteration {}: w: {:0.5f}, b: "{:0.5f}".format(i,sess.run(w),sess.run(b))
+  print("Iteration {}: w: {:0.5f}, b: {:0.5f}".format(i,sess.run(w),sess.run(b)))
 ```
